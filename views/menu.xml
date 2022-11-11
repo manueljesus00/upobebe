@@ -1,0 +1,16 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Transaccion
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    11/11/2022
+-->
+<odoo>
+    <!-- Top menu item -->
+  <menuitem name="UPOBEBE" id="main_upobebe_menu" groups="group_tienda"/>
+
+  <!-- menu categories -->
+  <menuitem name="UPOBEBE" id="upobebe_menu" groups="group_tienda" parent="main_upobebe_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Transacciones" id="transacciones_menu" parent="upobebe_menu" groups="group_tienda" action="transaccion_list_action"/>
+</odoo>

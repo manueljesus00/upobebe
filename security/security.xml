@@ -1,0 +1,11 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Transaccion
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    11/11/2022
+-->
+<odoo>
+    <record id="group_tienda" model="res.groups">
+        <field name="name">Admin tienda</field>
+    </record>
+</odoo>

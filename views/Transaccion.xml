@@ -1,0 +1,40 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Transaccion
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    11/11/2022
+-->
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="upobebe_form_view" model="upobebe.Transaccion">
+        <field name="name">upobebe.Transacciones.form</field>
+        <field name="model">upobebe.Transacciones</field>
+        <field name="arch" type="xml">
+        <form string="Transaccion">
+            <sheet layout="auto">
+                <group>
+                    <field name="idTransaccion"/>
+                    <field name="fechaTransaccion" widget="datetime"/>
+                    <field name="tipoTransaccion" widget="many2one"/>
+                    <field name="dniEmpleado" widget="many2one"/>
+                </group>
+                <group>
+                    <field name="idArticulo" widget="one2many"/>
+                </group>
+                <group>
+                    <field name="idProveedor" widget="many2one"/>
+                    <field name="dniCliente" widget="many2one"/>
+                </group>
+            </sheet>
+        </form>
+    </record>
+
+    <record id="listaAcciones" model="ir.actions.act_window">
+        <field name="name">Users</field>
+        <field name="res_model">upobebe.Transaccion</field>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first user</p>
+        </field>
+    </record>
+</odoo>

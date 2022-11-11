@@ -1,32 +1,32 @@
 # -*- coding: utf-8 -*-
+# Version:      0.1.0
+# Modelo:       Transaccion
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    11/11/2022
 {
     'name': "upobebe",
-
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo destinado a la gestion de una tienda de articulos para bebe""",
 
     'description': """
-        Long description of module's purpose
+        Este modulo en especifico gestiona las transacciones realizadas dentro
+        de la propia tienda. Tiene 6 claves foraneas y una clave primaria.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Manuel Jesus Flores Montano",
+    'website': "https://www.github.com/manueljesus00/upobebe",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
+    'version': '0.1.0',
     'depends': ['base'],
-
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'views/Transaccion.xml',
+        'views/menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
