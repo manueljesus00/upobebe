@@ -1,5 +1,5 @@
 <!--
-# Version:      0.1.0
+# Version:      0.1.1
 # Modelo:       Transaccion
 # Editor:       Manuel Jesus Flores Montano (@manueljesus00)
 # Fecha rev:    11/11/2022
@@ -16,6 +16,7 @@
                     <field name="idTransaccion"/>
                     <field name="fechaTransaccion" widget="datetime"/>
                     <field name="tipoTransaccion" widget="many2one"/>
+                    <field name="idFinanciacion"/>
                     <field name="dniEmpleado" widget="many2one"/>
                 </group>
                 <group>
