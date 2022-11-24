@@ -1,4 +1,26 @@
+
 <odoo>
-    <record id="upobebe_form_view_empleado" model="upobebe.empleados"/>
-    
+    <record id="upobebe_form_view_empleado" model="ir.ui.view"/>
+        <field name="name">upobebe.empleado.form</field>
+        <field name="model">upobebe.empleado</field>
+        <field name="arch" type="xml">
+        <form string="empleado">
+            <sheet layout="auto">
+            <group>
+                <field name="dniEmpleado"/>
+            </group>
+            <notebook>
+                <page name="datos_basicos" string="Datos básicos del empleado">
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="correo"/>
+                    <field name="fechaNacimiento" widget="date"/>
+                </page>
+                <page name="datos_empresa" string="Datos del empleado relacionado con la empresa">
+                    <field name="fechaAlta" widget="date"/>
+                    <field name="tipoCargo" widget="one2many_list"/>
+                </page>
+            </notebook>
+            </sheet>
+        </form>
 </odoo>
