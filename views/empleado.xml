@@ -1,0 +1,4 @@
+<odoo>
+    <record id="upobebe_form_view_empleado" model="upobebe.empleados"/>
+    
+</odoo>
