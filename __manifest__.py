@@ -3,14 +3,14 @@
     'name': "upobebe",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo especifico para la gestion de articulos de UPOBEBE
+        """,
 
     'description': """
-        Long description of module's purpose
+        Modulo especifico para la gestion de articulos de UPOBEBE
     """,
 
-    'author': "My Company",
+    'author': "Manuel Jesus Flores",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
