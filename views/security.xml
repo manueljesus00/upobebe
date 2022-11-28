@@ -1,0 +1,5 @@
+<odoo>
+    <record id="upobebe_cargos" model="ir.model.access">
+        <field name="name">Tienda UPOBEBE</field>
+    </record>
+</odoo>
