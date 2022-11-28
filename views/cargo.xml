@@ -1,24 +1,33 @@
 <odoo>
-  <record id="upobebe_cargo_form_view" model="ir.ui.view">
-    <field name="name">upobebe.cargo.form</field>
-    <field name="model">upobebe.cargo</field>
-    <field name="arch" type="xml">
-      <form string="Cargos">
-        <sheet layour="auto">
-          <group>
-            <field name="idCargo"/>
-          </group>
-        </sheet>
-      </form>
-    </field>
-  </record>
+  <data>
+  <!-- Vista en modo lista -->
+    <record id="upobebe.list" model="ir.ui.view">
+      <field name="name">Cargos UPOBEBE</field>
+      <field name="model">upobebe.cargo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="idCargo"/>
+        </tree>
+      </field>
+    </record>
+  <!-- Acciones al abrir la vista -->
+    <record id="upobebe.action_window" model="ir.actions.act_window">
+      <field name="name">Cargos</field>
+      <field name="res_model">upobebe.cargo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  <!-- Info acerca de los menus -->
+    <!-- Top menu item -->
 
-  <record id="cargo_list_action" model="ir.actions.act_window">
-    <field name="name">Cargos</field>
-    <field name="res_model">upobebe.cargo</field>
-    <field name="view_mode">form</field>
-    <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Create the first user</p>
-    </field>
-  </record>
+    <menuitem name="upobebe" id="upobebe.menu_root"/>
+
+    <!-- menu categorias. Esto se rellena posteriormente al unir todo -->
+
+    <menuitem name="Cargos" id="upobebe.menu_cargos" parent="upobebe.menu_root"/>
+
+    <!-- acciones de cada menu -->
+
+    <menuitem name="mostrarListaCargos" id="upobebe.accion_cargos_mostrarListadoCargos" parent="upobebe.menu_cargos"
+              action="upobebe.action_window"/>
+  </data>
 </odoo>
