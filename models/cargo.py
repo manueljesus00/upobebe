@@ -8,6 +8,6 @@
 from odoo import models, fields, api
 class cargo(models.Model):
     _name = 'upobebe.cargo'
-    _description = 'Cargos de empleados en UPOBebe'
+    _description = 'upobebe.cargo'
 
     idCargo =  fields.Char("Cargo del empleado",required=True)
