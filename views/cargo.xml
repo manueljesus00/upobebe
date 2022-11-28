@@ -1,0 +1,24 @@
+<odoo>
+  <record id="upobebe_cargo_form_view" model="ir.ui.view">
+    <field name="name">upobebe.cargo.form</field>
+    <field name="model">upobebe.cargo</field>
+    <field name="arch" type="xml">
+      <form string="Cargos">
+        <sheet layour="auto">
+          <group>
+            <field name="idCargo"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="cargo_list_action" model="ir.actions.act_window">
+    <field name="name">Cargos</field>
+    <field name="res_model">upobebe.cargo</field>
+    <field name="view_mode">form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create the first user</p>
+    </field>
+  </record>
+</odoo>
