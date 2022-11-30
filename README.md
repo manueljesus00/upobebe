@@ -1,2 +1,4 @@
 # Repositorio UPOBEBE
-Esta rama corresponde a la tabla TRANSACCION que la desarrolla Manuel Jesus Flores Montano
+Rama DEVELOP del proyecto.
+
+¡¡ENVIAR AQUÍ TODO ANTES DE PASARLO AL MAIN PARA COMPROBAR QUE NO DA ERRORES!!
