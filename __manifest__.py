@@ -20,13 +20,15 @@
     'version': '0.1.0',
     'depends': ['base'],
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv',
+        #'security/security.xml',
+        #'security/ir.model.access.csv',
         'views/cliente_view.xml',
         'views/suscripcion_view.xml',
-        #'views/tipoTransaccion_view.xml',
-        'views/Transaccion.xml',
+        'views/tipoTransaccion_view.xml',
+        'views/transaccion.xml',
         'views/menu.xml'
+        'views/cargo.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

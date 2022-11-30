@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+  <!-- Vista en modo lista -->
+    <record id="upobebe.list" model="ir.ui.view">
+      <field name="name">Cargos UPOBEBE</field>
+      <field name="model">upobebe.cargo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="idCargo"/>
+        </tree>
+      </field>
+    </record>
+  <!-- Acciones al abrir la vista -->
+    <record id="cargos_list_action" model="ir.actions.act_window">
+      <field name="name">Cargos</field>
+      <field name="res_model">upobebe.cargo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  </data>
+</odoo>

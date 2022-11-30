@@ -9,7 +9,7 @@
 # from odoo import models, fields, api
 
 from odoo import models, fields, api
-class Transaccion(models.Model):
+class transaccion(models.Model):
     _name = 'upobebe.transaccion'
     _description = 'Transaccion en UPOBebe'
 

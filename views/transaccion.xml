@@ -25,7 +25,7 @@
     </record>
 
     <record id="transacciones_list_action" model="ir.actions.act_window">
-        <field name="name">Transaccion</field>
+        <field name="name">transaccion</field>
         <field name="res_model">upobebe.transaccion</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

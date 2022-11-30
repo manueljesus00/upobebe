@@ -6,6 +6,7 @@
 -->
 
 <odoo>
+ <data>
     <record id="upobebe_form_view_empleado" model="ir.ui.view"/>
         <field name="name">upobebe.empleado.form</field>
         <field name="model">upobebe.empleado</field>
@@ -29,4 +30,12 @@
             </notebook>
             </sheet>
         </form>
+    </record>
+    <!-- Acciones al abrir la vista -->
+    <record id="empleados_list_action" model="ir.actions.act_window">
+      <field name="name">Cargos</field>
+      <field name="res_model">upobebe.cargo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+ </data>
 </odoo>

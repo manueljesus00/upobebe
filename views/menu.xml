@@ -1,17 +1,38 @@
 <!--
 # Version:      0.1.0
-# Modelo:       Transaccion
+# Modelo:       UPOBEBE - Menu general
 # Editor:       Manuel Jesus Flores Montano (@manueljesus00)
-# Fecha rev:    11/11/2022
+# Fecha rev:    30/11/2022
 -->
 <odoo>
-    <!-- Top menu item -->
-  <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager" />
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager" />
 
-  <!-- menu categories -->
-  <menuitem name="upobebe" id="upobebe_menu" groups="group_tienda_manager" parent="main_upobebe_menu" />
+        <!-- menu categories -->
+        <menuitem name="upobebe" id="upobebe_menu" groups="group_tienda_manager" parent="main_upobebe_menu" />
 
-  <!-- actions -->
-  <menuitem name="Transacciones" id="transacciones_menu" parent="upobebe_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
-  <!--<menuitem name="cliente" id="cliente_menu" parent="upobebe_menu" groups="group_tienda_manager" action="cliente_list_action"/>-->
+        <!-- menus por tipo de actividad -->
+        <menuitem name="personas" id="upobebe_menu_personas" groups="group_tienda_manager" parent="upobebe_menu" />
+        <menuitem name="transacciones" id="upobebe_menu_personas" groups="group_tienda_manager" parent="upobebe_menu" />
+        <menuitem name="gesProductos" id="upobebe_menu_gesProductos" groups="group_tienda_manager" parent="upobebe_menu" />
+        <menuitem name="gesLogistica" id="upobebe_menu_gesLogistica" groups="group_tienda_manager" parent="upobebe_menu" />
+
+
+        <!-- actions de personas -->
+        <menuitem name="Cargos" id="upobebe_menu_personas_cargos" parent="upobebe_menu_personas" groups="group_tienda_manager" action="cargos_list_action"/>
+        <menuitem name="Empleados" id="upobebe_menu_personas_empleados" parent="upobebe_menu_personas" groups="group_tienda_manager" action="empleados_list_action"/>
+        <menuitem name="Clientes" id="upobebe_menu_personas_clientes" parent="upobebe_menu_personas" groups="group_tienda_manager" action="cliente_list_action"/>
+
+        <!-- actions de transacciones -->
+        <menuitem name="Transacciones" id="upobebe_menu_transacciones_transacciones" parent="upobebe_menu_transacciones" groups="group_tienda_manager" action="suscripcion_list_action"/>
+        <menuitem name="Tipos de transacciones" id="upobebe_menu_personas_transacciones_tipoTransacciones" parent="upobebe_menu_transacciones" groups="group_tienda_manager" action="tipotransaccion_list_action"/>
+
+        <!-- actions de gestion de logistica -->
+        <menuitem name="Suscripciones" id="upobebe_menu_gesLogistica_suscripciones" parent="upobebe_menu_gesLogistica" groups="group_tienda_manager" action="suscripcion_list_action"/>
+
+        <!-- actions de gestion de productos -->
+        <menuitem name="Articulos" id="upobebe_menu_gesProductos_articulos" parent="upobebe_menu_gesProductos" groups="group_tienda_manager" action="upobebe_act_articulos"/>
+
+    </data>
 </odoo>
