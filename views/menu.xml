@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+          <!-- Info acerca de los menus -->
+    <!-- Top menu item -->
+
+    <menuitem name="upobebe" id="upobebe.menu_root"/>
+
+    <!-- menu categorias. Esto se rellena posteriormente al unir todo -->
+        <menuitem name="Cargos" id="upobebe.menu_cargos" parent="upobebe.menu_root"/>
+    <!-- acciones de cada menu -->
+
+    <menuitem name="mostrarListaCargos" id="upobebe.accion_cargos_mostrarListadoCargos" parent="upobebe.menu_cargos"
+              action="upobebe.action_window"/>
+    </data>
+</odoo>

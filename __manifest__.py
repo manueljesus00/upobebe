@@ -26,7 +26,7 @@
     'data': [
         #'security/ir.model.access.csv',
         'views/cargo.xml',
-        #'views/menu.xml',
+        'views/menu.xml',
         #'views/security.xml'
     ],
     # only loaded in demonstration mode
