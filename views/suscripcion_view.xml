@@ -1,0 +1,44 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Suscripcion
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    24/11/2022
+-->
+
+<odoo>
+  <record id="upobebe_suscripcion_form_view" model="ir.ui.view">
+    <field name="name">upobebe.suscripcion.form</field>
+    <field name="model">upobebe.suscripcion</field>
+    <field name="arch" type="xml">
+      <form string="Suscripcion">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="descuento" />
+            <!--<field name="dniCliente" widget="One2meny" />-->
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="upobebe_suscripcion_tree_view" model="ir.ui.view">
+    <field name="name">upobebe.suscripcion.tree</field>
+    <field name="model">upobebe.suscripcion</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="descuento" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="suscripcion_list_action" model="ir.actions.act_window">
+    <field name="name">Suscripcion</field>
+    <field name="res_model">upobebe.suscripcion</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea tu suscripcion</p>
+    </field>
+  </record>
+</odoo>
