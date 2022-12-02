@@ -9,9 +9,9 @@
   <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager" />
 
   <!-- menu categories -->
-  <menuitem name="upobebe" id="upobebe_menu" groups="group_tienda_manager" parent="main_upobebe_menu" />
+  <menuitem name="Transacciones" id="upobebe_transaccion_menu" groups="group_tienda_manager" parent="main_upobebe_menu" />
 
   <!-- actions -->
-  <menuitem name="Transacciones" id="transacciones_menu" parent="upobebe_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
+  <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
   <!--<menuitem name="cliente" id="cliente_menu" parent="upobebe_menu" groups="group_tienda_manager" action="cliente_list_action"/>-->
 </odoo>
