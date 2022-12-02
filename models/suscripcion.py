@@ -15,7 +15,7 @@ class Suscripcion(models.Model):
     name = fields.Char(string="Nombre", required=True, help="Nombre del suscripcion")
     descuento = fields.Float(string="Descuento", required=True, help="Porcentaje de descuento por la suscripcion")
     # La he intentado implementar pero me sale "No se encontró ningún campo inverso None para 'upobebe.cliente'"
-    #cliente_ids = fields.One2many("upobebe.cliente", required=False)
+    cliente_ids = fields.One2many("upobebe.cliente", required=False, string="Clientes")
 
 
     _sql_constraints = [("suscripcion_name_unique", "UNIQUE (name)", "El nombre debe ser único")]

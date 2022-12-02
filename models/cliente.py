@@ -20,7 +20,7 @@ class Cliente(models.Model):
     fechaNacimiento = fields.Datetime("Fecha de nacimiento", autodate=True, help="Fecha de nacimiento del cliente")
 
     # La he intentado implementar pero me sale "No se encontró ningún campo inverso None para 'upobebe.cliente'"
-    #suscripciones_ids = fields.Many2one("upobebe.suscripcion",required=False,string="Suscripcion")
+    suscripciones_ids = fields.Many2one("upobebe.suscripcion",required=False,string="Suscripcion")
     # Este de abajo no se si es asi
     #idTransaccion = fields.Meny2one("upobebe.transaccion",required=False,string="Transaccion")
 
