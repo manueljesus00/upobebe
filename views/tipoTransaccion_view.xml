@@ -21,7 +21,7 @@
     </field>
   </record>
 
-  <record id="upobebe_tipotransaccion_tree_view" model="ir.ui.view">
+  <record id="upobebe_tipotransaccion_kanban_view" model="ir.ui.view">
     <field name="name">upobebe.tipotransaccion.kanban</field>
     <field name="model">upobebe.tipotransaccion</field>
     <field name="arch" type="xml">
