@@ -23,7 +23,7 @@
   </record>
 
   <record id="upobebe_suscripcion_tree_view" model="ir.ui.view">
-    <field name="name">upobebe.suscripcion.tree</field>
+    <field name="name">upobebe.suscripcion.kanban</field>
     <field name="model">upobebe.suscripcion</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
@@ -36,7 +36,7 @@
   <record id="suscripcion_list_action" model="ir.actions.act_window">
     <field name="name">Suscripcion</field>
     <field name="res_model">upobebe.suscripcion</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">kanban,form</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea tu suscripcion</p>
     </field>
