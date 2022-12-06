@@ -29,7 +29,7 @@
         'views/suscripcion_view.xml',
         #'views/tipoTransaccion_view.xml',
         'views/Transaccion.xml',
-        'views/empleado.xml'
+        'views/empleado.xml',
         'views/articulos.xml',
         'views/estadoArticulo_view.xml',
         'views/menu.xml'
