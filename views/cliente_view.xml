@@ -1,8 +1,8 @@
 <!--
-# Version:      0.1.0
+# Version:      0.2.1
 # Modelo:       Cliente
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
-# Fecha rev:    24/11/2022
+# Fecha rev:    06/12/2022
 -->
 
 <odoo>
@@ -20,7 +20,12 @@
           <group>
             <field name="correo" />
             <field name="domicilio" />
-            <!--<field name="idSuscripcion" /> -->
+            <field name="suscripciones_ids" widget="many2one" />
+            <field name="idTransaccion">
+              <tree>
+                <field name="idTransaccion" />
+              </tree>
+            </field>
           </group>
         </sheet>
       </form>

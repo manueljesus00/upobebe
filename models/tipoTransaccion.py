@@ -10,8 +10,8 @@
 from odoo import models, fields
 
 class tipoTransaccion(models.Model):
-    __name = "upobebe.tipoTransaccion"
-    __description = "Tipos de transacciones"
+    _name = "upobebe.tipoTransaccion"
+    _description = "Tipos de transacciones"
 
     name = fields.Char(string="Tipo Transaccion", required=True, help="Nombre del tipo de transaccion")
     #transacciones = fields.One2meny("upobebe.transaccion",required=False,string="Transacciones")
