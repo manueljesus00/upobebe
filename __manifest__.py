@@ -27,6 +27,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/articulos.xml',
+        'views/estadoArticulo_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

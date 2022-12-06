@@ -1,19 +1,19 @@
 <!--
-# Version:      0.1.1
+# Version:      0.1.2
 # Modelo:       estadiArtuculo
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
 # Fecha rev:    06/12/2022
 -->
 
 <odoo>
-  <record id="upobebe_estadoArticulo_form_view" model="ir.ui.view">
-    <field name="name">upobebe.estadoArticulo.form</field>
-    <field name="model">upobebe.estadoArticulo</field>
+  <record id="upobebe_estadoarticulo_form_view" model="ir.ui.view">
+    <field name="name">upobebe.estadoarticulo.form</field>
+    <field name="model">upobebe.estadoarticulo</field>
     <field name="arch" type="xml">
       <form string="EstadoArticulo">
         <sheet layout="auto">
           <group>
-            <field name="estado" />
+            <field name="name" />
           </group>
           <group>
             <field name="articulo_ids" widget="one2many" />
@@ -23,9 +23,9 @@
     </field>
   </record>
 
-  <record id="upobebe_estadoArticulo_tree_view" model="ir.ui.view">
-    <field name="name">upobebe.estadoArticulo.kanban</field>
-    <field name="model">upobebe.estadoArticulo</field>
+  <record id="upobebe_estadoarticulo_kanban_view" model="ir.ui.view">
+    <field name="name">upobebe.estadoarticulo.kanban</field>
+    <field name="model">upobebe.estadoarticulo</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="name" />
@@ -33,9 +33,9 @@
     </field>
   </record>
 
-  <record id="estadoArticulo_list_action" model="ir.actions.act_window">
+  <record id="estadoarticulo_list_action" model="ir.actions.act_window">
     <field name="name">Estado del Articulo</field>
-    <field name="res_model">upobebe.estadoArticulo</field>
+    <field name="res_model">upobebe.estadoarticulo</field>
     <field name="view_mode">kanban,form</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea tu estadoArticulo</p>
