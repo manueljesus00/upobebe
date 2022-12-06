@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.1.0
+# Version:      0.2.0
 # Modelo:       Cliente
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
-# Fecha rev:    23/11/2022
+# Fecha rev:    06/12/2022
 
 from odoo import models, fields, api
 
@@ -19,10 +19,8 @@ class Cliente(models.Model):
     domicilio = fields.Char(string="Domicilio", required=False, help="Domicilio del cliente")
     fechaNacimiento = fields.Datetime("Fecha de nacimiento", autodate=True, help="Fecha de nacimiento del cliente")
 
-    # La he intentado implementar pero me sale "No se encontró ningún campo inverso None para 'upobebe.cliente'"
-    # suscripciones_ids = fields.Many2one("upobebe.suscripcion",required=False,string="Suscripcion")
-    # Este de abajo no se si es asi
-    #idTransaccion = fields.Meny2one("upobebe.transaccion",required=False,string="Transaccion")
+    suscripciones_ids = fields.Many2one("upobebe.suscripcion", required=False, string="Suscripcion")
+    idTransaccion = fields.Many2many("upobebe.transaccion", required=False, string="Transaccion")
 
 
     _sql_constraints = [('cliente_dniCliente_unique','UNIQUE (dniCliente)','El dni debe ser único')]
