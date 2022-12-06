@@ -1,40 +1,55 @@
 <!--
-# Version:      0.1.1
+# Version:      0.1.0
 # Modelo:       Empleado
 # Editor:       Manuel Jesus Flores Montano (@manueljesus00)
-# Fecha rev:    02/12/2022
+# Fecha rev:    06/12/2022
 -->
 
 <odoo>
-    <record id="upobebe_form_view_empleado" model="ir.ui.view"/>
-        <field name="name">upobebe.empleado.form</field>
-        <field name="model">upobebe.empleado</field>
+    <record id="upobebe_empleado_form_view" model="ir.ui.view">
+        <field name="name">upobebe.empleados.form</field>
+        <field name="model">upobebe.empleados</field>
         <field name="arch" type="xml">
-        <form string="empleado">
-            <sheet layout="auto">
-            <group>
-                <field name="dniEmpleado"/>
-            </group>
-            <notebook>
-                <page name="datos_basicos" string="Datos básicos del empleado">
-                    <field name="nombre"/>
-                    <field name="apellidos"/>
-                    <field name="correo"/>
-                    <field name="fechaNacimiento" widget="date"/>
-                </page>
-                <page name="datos_empresa" string="Datos del empleado relacionado con la empresa">
-                    <field name="fechaAlta" widget="date"/>
-                    <field name="tipoCargo" widget="one2many_list"/>
-                </page>
-            </notebook>
-            </sheet>
-        </form>
-        <record id="empleados_list_action" model="ir.actions.act_window">
-            <field name="name">Gestion de empleados</field>
-            <field name="res_model">upobebe.empleados</field>
-            <field name="view_mode">form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Nadie trabaja aqui...</p>
-            </field>
-        </record>
+            <form string="Empleados">
+                <sheet layout="auto">
+                    <group>
+                        <field name="dniEmpleado" />
+                        <field name="nombre" />
+                        <field name="apellidos" />
+                    </group>
+                    <group>
+                        <field name="correo" />
+                        <field name="fechaNacimiento" />
+                        <field name="fechaAlta" />
+                        <field name="tipoCargo" widget="many2one" />
+                        <tree>
+                            <field name="tipoCargo" widget="many2one" />
+                        </tree>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="upobebe_empleado_tree_view" model="ir.ui.view">
+        <field name="name">upobebe.empleados.tree</field>
+        <field name="model">upobebe.empleados</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="dniEmpleado" />
+                <field name="apellidos" />
+                <field name="nombre" />
+                <field name="correo" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="empleado_list_action" model="ir.actions.act_window">
+        <field name="name">Empleado</field>
+        <field name="res_model">upobebe.empleados</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crear empleados</p>
+        </field>
+    </record>
 </odoo>

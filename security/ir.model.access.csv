@@ -4,3 +4,5 @@ suscripcion_manager,suscripcion_manager,model_upobebe_suscripcion,group_tienda_m
 transaccion_manager,transaccion_manager,model_upobebe_transaccion,group_tienda_manager,1,1,1,1
 articulo_manager,articulo_manager,model_upobebe_articulo,group_tienda_manager,1,1,1,1
 estadoarticulo_manager,estadoarticulo_manager,model_upobebe_estadoarticulo,group_tienda_manager,1,1,1,1
+empleados_manager,empleados_manager,model_upobebe_empleados,group_tienda_manager,1,1,1,1
+cargo_manager,cargo_manager,model_upobebe_cargo,group_tienda_manager,1,1,1,1

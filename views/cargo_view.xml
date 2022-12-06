@@ -1,20 +1,23 @@
 <odoo>
   <data>
   <!-- Vista en modo lista -->
-    <record id="upobebe.list" model="ir.ui.view">
-      <field name="name">Cargos UPOBEBE</field>
-      <field name="model">upobebe.cargo</field>
+    <record id="upobebe_cargo_form_view" model="ir.ui.view">
+      <field name="name">upobebe.cargo.form</field>
+      <field name="model">upobebe.cargo.list</field>
       <field name="arch" type="xml">
-        <tree>
-          <field name="idCargo"/>
-        </tree>
-      </field>
+        <form string="Cargos">
+          <sheet layout="auto">
+            <group>
+              <field name="idCargo" />
+            </group>
+          </sheet>
+        </form>
     </record>
   <!-- Acciones al abrir la vista -->
-    <record id="upobebe.action_window" model="ir.actions.act_window">
+    <record id="cargo_list_action" model="ir.actions.act_window">
       <field name="name">Cargos</field>
       <field name="res_model">upobebe.cargo</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">form</field>
     </record>
   </data>
 </odoo>
