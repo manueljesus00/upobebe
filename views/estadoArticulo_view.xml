@@ -1,5 +1,5 @@
 <!--
-# Version:      0.1.0
+# Version:      0.1.2
 # Modelo:       estadiArtuculo
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
 # Fecha rev:    06/12/2022
@@ -13,7 +13,7 @@
       <form string="EstadoArticulo">
         <sheet layout="auto">
           <group>
-            <field name="estado" />
+            <field name="name" />
           </group>
           <group>
             <field name="articulo_ids" widget="one2many" />
@@ -23,7 +23,7 @@
     </field>
   </record>
 
-  <record id="upobebe_estadoarticulo_tree_view" model="ir.ui.view">
+  <record id="upobebe_estadoarticulo_kanban_view" model="ir.ui.view">
     <field name="name">upobebe.estadoarticulo.kanban</field>
     <field name="model">upobebe.estadoarticulo</field>
     <field name="arch" type="xml">
@@ -38,7 +38,7 @@
     <field name="res_model">upobebe.estadoarticulo</field>
     <field name="view_mode">kanban,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea tu estadoarticulo</p>
+      <p class="o_view_nocontent_smiling_face">Crea tu estadoArticulo</p>
     </field>
   </record>
 </odoo>
