@@ -1,17 +1,29 @@
 <!--
-# Version:      0.1.0
+# Version:      0.3.0
 # Modelo:       Transaccion
-# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
-# Fecha rev:    11/11/2022
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00) and Pedro Jesus Lazaro Diaz (@VitalSum)
+# Fecha rev:    05/12/2022
 -->
 <odoo>
+<data>
     <!-- Top menu item -->
-  <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager" />
+  <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager"/>
 
   <!-- menu categories -->
-  <menuitem name="Transacciones" id="upobebe_transaccion_menu" groups="group_tienda_manager" parent="main_upobebe_menu" />
+  <menuitem
+    id="upobebe_cliente_menu"
+    name="Gestión de clientes"
+    parent="main_upobebe_menu"/>
 
+  <menuitem
+    id="upobebe_transaccion_menu"
+    name="Gestión de transacciones"
+    parent="main_upobebe_menu"/>
   <!-- actions -->
+  <!-- Seguir formato de ID upobebe_NameModel_menu_action_nameAction -->
   <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
-  <!--<menuitem name="cliente" id="cliente_menu" parent="upobebe_menu" groups="group_tienda_manager" action="cliente_list_action"/>-->
+  <menuitem name="Clientes" id="clientes_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="cliente_list_action"/>
+  <menuitem name="Suscripciones" id="suscripciones_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="suscripcion_list_action"/>
+  <!-- <menuitem name="Tipo de Transaccion" id="tipoTransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/> -->
+</data>
 </odoo>
