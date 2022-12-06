@@ -19,11 +19,19 @@
     id="upobebe_transaccion_menu"
     name="Gestión de transacciones"
     parent="main_upobebe_menu"/>
+
+  <menuitem
+    id="upobebe_articulo_menu"
+    name="Gestión de articulos"
+    parent="main_upobebe_menu"/>
+
   <!-- actions -->
   <!-- Seguir formato de ID upobebe_NameModel_menu_action_nameAction -->
   <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
   <menuitem name="Clientes" id="clientes_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="cliente_list_action"/>
   <menuitem name="Suscripciones" id="suscripciones_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="suscripcion_list_action"/>
   <!-- <menuitem name="Tipo de Transaccion" id="tipoTransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/> -->
+  <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action=""/> --><!--Tenemos que cambiar el xml de articulo, no tiene el action-->
+  <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>
 </data>
 </odoo>
