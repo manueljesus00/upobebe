@@ -29,7 +29,8 @@
         'views/suscripcion_view.xml',
         #'views/tipoTransaccion_view.xml',
         'views/Transaccion.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        'views/empleado.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

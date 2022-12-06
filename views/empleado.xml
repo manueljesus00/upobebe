@@ -29,12 +29,12 @@
             </notebook>
             </sheet>
         </form>
-        <record id="empleado_list_action" model="ir.actions.act_window">
+        <record id="empleados_list_action" model="ir.actions.act_window">
             <field name="name">Gestion de empleados</field>
-            <field name="res_model">upobebe.empleado</field>
-            <field name="view_mode">tree,form</field>
+            <field name="res_model">upobebe.empleados</field>
+            <field name="view_mode">form</field>
             <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Create the first user</p>
+                <p class="o_view_nocontent_smiling_face">Nadie trabaja aqui...</p>
             </field>
         </record>
 </odoo>

@@ -23,6 +23,7 @@
   <!-- Seguir formato de ID upobebe_NameModel_menu_action_nameAction -->
   <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
   <menuitem name="Clientes" id="clientes_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="cliente_list_action"/>
+  <menuitem name="Empleados" id="empleados_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="empleados_list_action"/>
   <menuitem name="Suscripciones" id="suscripciones_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="suscripcion_list_action"/>
 </data>
 </odoo>

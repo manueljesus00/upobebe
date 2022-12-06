@@ -11,3 +11,5 @@ class cargo(models.Model):
     _description = 'upobebe.cargo'
 
     idCargo =  fields.Char("Cargo del empleado",required=True)
+
+    _sql_constraints = [('idCargo_unique', 'unique(idCargo)', 'El identificador del cargo debe ser unico')]

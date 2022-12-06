@@ -25,7 +25,8 @@ class Cliente(models.Model):
     #idTransaccion = fields.Meny2one("upobebe.transaccion",required=False,string="Transaccion")
 
 
-    _sql_constraints = [('dniClientes_name_unique','UNIQUE (dniCliente)','El dni debe ser único')]
+    #_sql_constraints = [('dniClientes_name_unique','unique (dniCliente)','El dni debe ser único')]
+    
 
    
     @api.constrains("name")
