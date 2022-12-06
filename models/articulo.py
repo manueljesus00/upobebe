@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.2.0
+# Version:      0.2.1
 # Modelo:       Articulo
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum) and Manuel Jesus Flores Montaño (@manueljesus00)
 # Fecha rev:    06/12/2022
@@ -17,5 +17,5 @@ class articulo(models.Model):
     precio = fields.Float(size=6, required=True)
 
     # numAlmacen = fields.Many2one("upobebe.almacen","Numero de almacen", required=True)
-    tipoEstado = fields.Many2one("upobebe.estadoArticulo", required=True, string="Estado")
+    tipoEstado = fields.Many2one("upobebe.estadoarticulo", required=True,string="Estado")
     # nombreProducto = fields.Many2one("upobebe.articulo","Tipo de articulo", required=True)

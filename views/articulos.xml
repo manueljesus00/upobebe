@@ -10,35 +10,11 @@
           <field name="idArticulo"/>
           <field name="photo" widget="image" class="oe_avatar" />
           <!-- <field name="numAlmacen"/> -->
-          <field name="tipoEstado"/>
+          <!-- <field name="tipoEstado"/> -->
           <!-- <field name="nombreProducto"/> -->
           <field name="precio"/>
         </tree>
       </field>
     </record>
-
-
-    <!-- Acciones al abrir la vista -->
-    <record model="ir.actions.act_window" id="upobebe.action_window">
-      <field name="name">Ventanas Upobebe</field>
-      <field name="res_model">upobebe.articulo</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- Info de los menus -->
-
-    <!-- Top menu item -->
-
-    <menuitem name="upobebe" id="upobebe.menu_root"/>
-
-    <!-- menu categorias. Esto se rellena posteriormente al unir todo -->
-
-    <menuitem name="Articulos" id="upobebe.menu_articulos" parent="upobebe.menu_root"/>
-
-    <!-- acciones de cada menu -->
-
-    <menuitem name="mostrarListaArticulos" id="upobebe.accion_articulos_mostrarArticulo" parent="upobebe.menu_articulos"
-              action="upobebe.action_window"/>
-
   </data>
 </odoo>

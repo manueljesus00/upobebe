@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-u01,upobebe.articulo,upobebe.articulo,,1,1,1,1
+articulo_manager,articulo_manager,model_upobebe_articulo,group_tienda_manager,1,1,1,1
+estadoarticulo_manager,estadoarticulo_manager,model_upobebe_estadoarticulo,group_tienda_manager,1,1,1,1
