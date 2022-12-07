@@ -32,7 +32,7 @@
   </record>
 
   <record id="tipotransaccion_list_action" model="ir.actions.act_window">
-    <field name="name">TipoTransaccion</field>
+    <field name="name">Tipo de Transaccion</field>
     <field name="res_model">upobebe.tipotransaccion</field>
     <field name="view_mode">kanban,form</field>
     <field name="help" type="html">

@@ -22,7 +22,7 @@ class Suscripcion(models.Model):
 
     @api.constrains("descuento")
     def _check_descuento(self):
-        if self.descuento < 0 and self.descuento > 1:
+        if self.descuento > 0 and self.descuento < 1:
             raise models.ValidationError("El descuento debe ser un valor entre 0 y 1")
     
    

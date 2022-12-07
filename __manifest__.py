@@ -27,7 +27,7 @@
         'security/ir.model.access.csv',
         'views/cliente_view.xml',
         'views/suscripcion_view.xml',
-        #'views/tipoTransaccion_view.xml',
+        'views/tipoTransaccion_view.xml',
         'views/Transaccion.xml',
         'views/empleado.xml',
         'views/articulos.xml',

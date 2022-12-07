@@ -2,6 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 cliente_manager,cliente_manager,model_upobebe_cliente,group_tienda_manager,1,1,1,1
 suscripcion_manager,suscripcion_manager,model_upobebe_suscripcion,group_tienda_manager,1,1,1,1
 transaccion_manager,transaccion_manager,model_upobebe_transaccion,group_tienda_manager,1,1,1,1
+tipotransaccion_manager,tipotransaccion_manager,model_upobebe_tipotransaccion,group_tienda_manager,1,1,1,1
 articulo_manager,articulo_manager,model_upobebe_articulo,group_tienda_manager,1,1,1,1
 estadoarticulo_manager,estadoarticulo_manager,model_upobebe_estadoarticulo,group_tienda_manager,1,1,1,1
 empleados_manager,empleados_manager,model_upobebe_empleados,group_tienda_manager,1,1,1,1
