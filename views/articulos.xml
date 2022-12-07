@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <!-- Vista en modo lista -->
+
+    <record model="ir.ui.view" id="upobebe.list">
+      <field name="name">Articulos UPOBEBE</field>
+      <field name="model">upobebe.articulo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="idArticulo"/>
+          <field name="photo" widget="image" class="oe_avatar" />
+          <!-- <field name="numAlmacen"/> -->
+          <!-- <field name="tipoEstado"/> -->
+          <!-- <field name="nombreProducto"/> -->
+          <field name="precio"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</odoo>

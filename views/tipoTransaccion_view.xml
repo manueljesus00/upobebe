@@ -1,0 +1,42 @@
+<!--
+# Version:      0.1.0
+# Modelo:       TipoTransaccion
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    11/11/2022
+-->
+
+<odoo>
+  <record id="upobebe_tipotransaccion_form_view" model="ir.ui.view">
+    <field name="name">upobebe.tipotransaccion.form</field>
+    <field name="model">upobebe.tipotransaccion</field>
+    <field name="arch" type="xml">
+      <form string="TipoTransaccion">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="transacciones" widget="one2many" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="upobebe_tipotransaccion_kanban_view" model="ir.ui.view">
+    <field name="name">upobebe.tipotransaccion.kanban</field>
+    <field name="model">upobebe.tipotransaccion</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="tipotransaccion_list_action" model="ir.actions.act_window">
+    <field name="name">Tipo de Transaccion</field>
+    <field name="res_model">upobebe.tipotransaccion</field>
+    <field name="view_mode">kanban,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea tipotransaccion</p>
+    </field>
+  </record>
+</odoo>

@@ -5,7 +5,7 @@
 # Fecha rev:    11/11/2022
 -->
 <odoo>
-    <record id="group_tienda" model="res.groups">
+    <record id="group_tienda_manager" model="res.groups">
         <field name="name">Admin tienda</field>
     </record>
 </odoo>

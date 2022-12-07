@@ -1,0 +1,56 @@
+<!--
+# Version:      0.2.2
+# Modelo:       Cliente
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    06/12/2022
+-->
+
+<odoo>
+  <record id="upobebe_cliente_form_view" model="ir.ui.view">
+    <field name="name">upobebe.cliente.form</field>
+    <field name="model">upobebe.cliente</field>
+    <field name="arch" type="xml">
+      <form string="Cliente">
+        <sheet layout="auto">
+          <group>
+            <field name="dniCliente" />
+            <field name="name" />
+            <field name="apellidos" />
+          </group>
+          <group>
+            <field name="correo" />
+            <field name="domicilio" />
+            <field name="suscripciones_ids" widget="many2one" />
+            <field name="idTransaccion">
+              <tree>
+                <field name="idTransaccion" />
+              </tree>
+            </field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="upobebe_cliente_tree_view" model="ir.ui.view">
+    <field name="name">upobebe.cliente.tree</field>
+    <field name="model">upobebe.cliente</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="dniCliente" />
+        <field name="apellidos" />
+        <field name="name" />
+        <field name="correo" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="cliente_list_action" model="ir.actions.act_window">
+    <field name="name">Cliente</field>
+    <field name="res_model">upobebe.cliente</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea cliente</p>
+    </field>
+  </record>
+</odoo>

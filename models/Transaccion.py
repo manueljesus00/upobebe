@@ -14,12 +14,13 @@ class Transaccion(models.Model):
     _description = 'Transaccion en UPOBebe'
 
     idTransaccion =  fields.Integer("ID. de la transaccion",required=True)
-    tipoTransaccion = fields.Many2one("upobebe.tipotransaccion",string="Tipo de transaccion",required=True)
-    dniEmpleado = fields.Many2one("upobebe.empleado",string="Empleado",required=True, size=9)
-    idFinanciacion = fields.Integer(string="Tipo de financiacion", related='financiacion idFinanciacion.financiacion')
-    idSeguimiento = fields.Integer(string="Numero de seguimiento", related='seguimiento idSeguimiento.seguimiento')
-    idArticulo = fields.One2Many("upobebe.articulo","field_articulos",string="Articulos", required=True)
-    idProveedor = fields.Many2one("upobebe.proveedor",string="Proveedor")
-    dniCliente = fields.Many2one("upobebe.cliente", string="Cliente", size=9)
+    tipotransaccion_id = fields.Many2one("upobebe.tipotransaccion", required=True, string="Tipo de transaccion")
+
+    #dniEmpleado = fields.Many2one("upobebe.empleado",string="Empleado",required=True, size=9)
+    idFinanciacion = fields.Integer(string="Tipo de financiacion")
+    idSeguimiento = fields.Integer(string="Numero de seguimiento")
+    #idArticulo = fields.One2many("upobebe.articulo","field_articulos",string="Articulos", required=True)
+   # idProveedor = fields.Many2one("upobebe.proveedor",string="Proveedor")
+   # dniCliente = fields.Many2one("upobebe.cliente", string="Cliente", size=9)
     fechaTransaccion = fields.Datetime('Fecha de compra',required=True, autodate=True)
 

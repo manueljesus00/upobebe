@@ -1,0 +1,55 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Empleado
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    06/12/2022
+-->
+
+<odoo>
+    <record id="upobebe_empleado_form_view" model="ir.ui.view">
+        <field name="name">upobebe.empleados.form</field>
+        <field name="model">upobebe.empleados</field>
+        <field name="arch" type="xml">
+            <form string="Empleados">
+                <sheet layout="auto">
+                    <group>
+                        <field name="dniEmpleado" />
+                        <field name="nombre" />
+                        <field name="apellidos" />
+                    </group>
+                    <group>
+                        <field name="correo" />
+                        <field name="fechaNacimiento" />
+                        <field name="fechaAlta" />
+                        <field name="tipoCargo" widget="many2one" />
+                        <tree>
+                            <field name="tipoCargo" widget="many2one" />
+                        </tree>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="upobebe_empleado_tree_view" model="ir.ui.view">
+        <field name="name">upobebe.empleados.tree</field>
+        <field name="model">upobebe.empleados</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="dniEmpleado" />
+                <field name="apellidos" />
+                <field name="nombre" />
+                <field name="correo" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="empleado_list_action" model="ir.actions.act_window">
+        <field name="name">Empleado</field>
+        <field name="res_model">upobebe.empleados</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crear empleados</p>
+        </field>
+    </record>
+</odoo>
