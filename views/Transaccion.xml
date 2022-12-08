@@ -6,11 +6,11 @@
             <form string="Transaccion">
                 <sheet layout="auto">
                     <group>
-                        <field name="idTransaccion" />
+                        <field name="idTransaccion" readonly="1"/>
                         <field name="fechaTransaccion" widget="datetime" />
                         <field name="tipotransaccion_id" widget="many2one"/>
                         <field name="idFinanciacion"/>
-                        <!--<field name="dniEmpleado" widget="many2one"/>-->
+                        <field name="dniEmpleado" widget="many2one"/>
                     </group>
                     <!--<group>
                         <field name="idArticulo" widget="one2many"/>

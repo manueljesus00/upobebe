@@ -7,5 +7,4 @@ from . import tipoTransaccion
 from . import empleados
 from . import articulo
 from . import estadoArticulo
-#from . import empleados
-
+from . import almacen

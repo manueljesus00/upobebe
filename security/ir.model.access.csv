@@ -7,3 +7,4 @@ articulo_manager,articulo_manager,model_upobebe_articulo,group_tienda_manager,1,
 estadoarticulo_manager,estadoarticulo_manager,model_upobebe_estadoarticulo,group_tienda_manager,1,1,1,1
 empleados_manager,empleados_manager,model_upobebe_empleados,group_tienda_manager,1,1,1,1
 cargo_manager,cargo_manager,model_upobebe_cargo,group_tienda_manager,1,1,1,1
+almacen_manager,almacen_manager,model_upobebe_almacen,group_tienda_manager,1,1,1,1

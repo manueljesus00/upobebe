@@ -32,7 +32,8 @@
         'views/empleado.xml',
         'views/articulos.xml',
         'views/estadoArticulo_view.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        'views/cargo_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

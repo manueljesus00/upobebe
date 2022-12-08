@@ -5,40 +5,33 @@
 # Fecha rev:    05/12/2022
 -->
 <odoo>
-<data>
+  <data>
     <!-- Top menu item -->
-  <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager"/>
+    <menuitem name="upobebe" id="main_upobebe_menu" groups="group_tienda_manager"/>
 
-  <!-- menu categories -->
-  <menuitem
-    id="upobebe_cliente_menu"
-    name="Gestión de clientes"
-    parent="main_upobebe_menu"/>
+    <!-- menu categories -->
+    <menuitem id="upobebe_cliente_menu" name="Gestión de clientes" parent="main_upobebe_menu"/>
 
-  <menuitem
-    id="upobebe_transaccion_menu"
-    name="Gestión de transacciones"
-    parent="main_upobebe_menu"/>
+    <menuitem id="upobebe_transaccion_menu" name="Gestión de transacciones" parent="main_upobebe_menu"/>
 
-  <menuitem
-    id="upobebe_articulo_menu"
-    name="Gestión de articulos"
-    parent="main_upobebe_menu"/>
+    <menuitem id="upobebe_articulo_menu" name="Gestión de articulos" parent="main_upobebe_menu"/>
 
-  <menuitem
-    id="upobebe_empleado_menu"
-    name="Gestión de empleados"
-    parent="main_upobebe_menu"/>
+    <menuitem id="upobebe_empleado_menu" name="Gestión de empleados" parent="main_upobebe_menu"/>
 
-  <!-- actions -->
-  <!-- Seguir formato de ID upobebe_NameModel_menu_action_nameAction -->
-  <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
-  <menuitem name="Clientes" id="clientes_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="cliente_list_action"/>
-  <menuitem name="Empleados" id="empleados_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="empleado_list_action"/>
-  <!-- <menuitem name="Cargos" id="cargo_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="cargo_list_action"/>   -->
-  <menuitem name="Suscripciones" id="suscripciones_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="suscripcion_list_action"/>
-  <menuitem name="Tipo de Transaccion" id="tipotransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/>
-  <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action=""/> --><!--Tenemos que cambiar el xml de articulo, no tiene el action-->
-  <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>
-</data>
+    <!-- actions -->
+    <!-- Seguir formato de ID upobebe_NameModel_menu_action_nameAction -->
+    <menuitem name="Clientes" id="clientes_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="cliente_list_action"/>
+    <menuitem name="Suscripciones" id="suscripciones_menu" parent="upobebe_cliente_menu" groups="group_tienda_manager" action="suscripcion_list_action"/>
+
+    <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
+    <menuitem name="Tipo de Transaccion" id="tipotransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/>
+
+    <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action=""/> -->    <!--Tenemos que cambiar el xml de articulo, no tiene el action-->
+    <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>
+    <!-- <menuitem name="Almacenes" id="almacen_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="almacen_list_action"/> --> <!-- Hay que crear el XML de almacen -->
+
+    <menuitem name="Empleados" id="empleados_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="empleado_list_action"/>
+    <menuitem name="Cargo de empleados" id="cargo_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="cargo_list_action" />
+
+  </data>
 </odoo>

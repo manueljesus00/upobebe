@@ -1,23 +1,36 @@
 <odoo>
-  <data>
-  <!-- Vista en modo lista -->
-    <record id="upobebe_cargo_form_view" model="ir.ui.view">
-      <field name="name">upobebe.cargo.form</field>
-      <field name="model">upobebe.cargo.list</field>
-      <field name="arch" type="xml">
-        <form string="Cargos">
-          <sheet layout="auto">
-            <group>
-              <field name="idCargo" />
-            </group>
-          </sheet>
-        </form>
-    </record>
+  <!-- Vista en modo form -->
+  <record id="upobebe_cargo_form_view" model="ir.ui.view">
+    <field name="name">upobebe.cargo.form</field>
+    <field name="model">upobebe.cargo</field>
+    <field name="arch" type="xml">
+      <form string="Cargos">
+        <sheet layout="auto">
+          <group>
+            <field name="idCargo" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Vista en modo grafico -->
+  <record id="upobebe_cargo_graph_view" model="ir.ui.view">
+    <field name="name">upobebe.cargo.graph</field>
+    <field name="model">upobebe.cargo</field>
+    <field name="arch" type="xml">
+      <graph string="Cargos totales en la empresa" type="pie">
+        <field name="idCargo" type="row" />
+      </graph>
+    </field>
+  </record>
+
   <!-- Acciones al abrir la vista -->
-    <record id="cargo_list_action" model="ir.actions.act_window">
-      <field name="name">Cargos</field>
-      <field name="res_model">upobebe.cargo</field>
-      <field name="view_mode">form</field>
+  <record id="cargo_list_action" model="ir.actions.act_window">
+    <field name="name">Cargos</field>
+    <field name="res_model">upobebe.cargo</field>
+    <field name="view_mode">form,graph</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_create">No existen cargos actualmente</p>
     </record>
-  </data>
-</odoo>
+  </odoo>
