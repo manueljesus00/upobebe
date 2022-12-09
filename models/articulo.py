@@ -18,7 +18,7 @@ class articulo(models.Model):
 
     num_Almacen = fields.Many2one("upobebe.almacen","Numero de almacen", required=True)
     tipoEstado = fields.Many2one("upobebe.estadoarticulo", required=True,string="Estado")
-    # nombreProducto = fields.Many2one("upobebe.articulo","Tipo de articulo", required=True)
+    producto_id = fields.Many2one("upobebe.producto", required=True, string="Producto")
 
     _sql_constraints = [('articulo_id_Articulo_unique', 'UNIQUE (id_articulo)', 'El id del articulo debe ser unico')]
 

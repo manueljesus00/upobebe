@@ -18,7 +18,8 @@ class Categoria(models.Model):
 
     _sql_constraints = [('categoria_name_unique', 'UNIQUE (name)', 'El nombre debe ser único')]
     
-    @api.constrains('descripcion')
-    def _check_descripcion(self):
-        if len(self.descripcion) > 50:
-            raise models.ValidationError("La descripcion no debe tener mas de 50 caracteres")
+    @api.constrains('name')
+    def _check_name(self):
+        if len(self.name) > 50:
+            raise models.ValidationError("El nombre no debe tener mas de 50 caracteres")
+

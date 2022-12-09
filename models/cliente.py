@@ -12,7 +12,7 @@ class Cliente(models.Model):
     _name = 'upobebe.cliente'
     _description = 'Clientes de UPOBEBE'
 
-    dni_cliente = fields.Char(string="DNI", required=True, help="DNI del cliente")
+    dni_cliente = fields.Char(string="DNI", size=9, required=True, help="DNI del cliente")
     name = fields.Char(string="Nombre", required=True, help="Nombre del cliente")
     apellidos = fields.Char(string="Apellidos", required=True, help="Apellidos del cliente")
     correo = fields.Char(string="Correo", required=False, help="Correo del cliente")

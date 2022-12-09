@@ -16,8 +16,14 @@ class Producto(models.Model):
     descripcion = fields.Char(string="Descripcion", required=True, help="Descripcion del producto")
 
     categoria_id = fields.Many2one("upobebe.categoria", required=True, string="Categoria")
+    articulos = fields.One2many("upobebe.articulo", 'producto_id', 'Articulos')
 
     _sql_constraints = [('producto_name_unique', 'UNIQUE (name)', 'El nombre debe ser único')]
+
+    @api.constrains('name')
+    def _check_name(self):
+        if len(self.name) > 50:
+            raise models.ValidationError("El nombre no debe tener mas de 50 caracteres")
 
     @api.constrains('stock')
     def _check_stock(self):
