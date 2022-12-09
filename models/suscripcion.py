@@ -18,11 +18,11 @@ class Suscripcion(models.Model):
     cliente_ids = fields.One2many("upobebe.cliente", 'suscripciones_ids', 'Clientes')
 
 
-    _sql_constraints = [("suscripcion_name_unique", "UNIQUE (name)", "El nombre debe ser único")]
+    _sql_constraints = [('suscripcion_name_unique', 'UNIQUE (name)', 'El nombre debe ser único')]
 
-    @api.constrains("descuento")
+    @api.constrains('descuento')
     def _check_descuento(self):
-        if self.descuento > 0 and self.descuento < 1:
+        if self.descuento < 0.0 or self.descuento > 1.0:
             raise models.ValidationError("El descuento debe ser un valor entre 0 y 1")
     
    
