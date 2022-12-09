@@ -7,7 +7,7 @@
       <field name="model">upobebe.articulo</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="idArticulo"/>
+          <field name="id_articulo"/>
           <field name="photo" widget="image" class="oe_avatar" />
           <!-- <field name="numAlmacen"/> -->
           <!-- <field name="tipoEstado"/> -->

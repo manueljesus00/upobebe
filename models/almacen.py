@@ -18,7 +18,7 @@ class almacen(models.Model):
 
     articulos_ids = fields.One2many("upobebe.articulo", 'num_Almacen', 'Articulos')
 
-    _sql_constraints = [('num_almacen_unique', 'unique(num_almacen)', 'El numero de almacen debe ser unico')]
+    _sql_constraints = [('almacen_num_almacen_unique', 'INIQUE (num_almacen)', 'El numero de almacen debe ser unico')]
     
     @api.constrains("capacidad")
     def _check_capacidad(self):

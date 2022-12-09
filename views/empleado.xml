@@ -13,7 +13,7 @@
             <form string="Empleados">
                 <sheet layout="auto">
                     <group>
-                        <field name="dniEmpleado" />
+                        <field name="dni_empleado" />
                         <field name="nombre" />
                         <field name="apellidos" />
                     </group>
@@ -33,7 +33,7 @@
         <field name="model">upobebe.empleados</field>
         <field name="arch" type="xml">
             <tree string="tree_string">
-                <field name="dniEmpleado" />
+                <field name="dni_empleado" />
                 <field name="apellidos" />
                 <field name="nombre" />
                 <field name="correo" />

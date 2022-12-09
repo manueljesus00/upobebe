@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.2.1
+# Version:      0.2.2
 # Modelo:       Suscripcion
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
 # Fecha rev:    06/12/2022
@@ -14,7 +14,7 @@ class Suscripcion(models.Model):
 
     name = fields.Char(string="Nombre", required=True, help="Nombre del suscripcion")
     descuento = fields.Float(string="Descuento", required=True, help="Porcentaje de descuento por la suscripcion")
-    # La he intentado implementar pero me sale "No se encontró ningún campo inverso None para 'upobebe.cliente'"
+    
     cliente_ids = fields.One2many("upobebe.cliente", 'suscripciones_ids', 'Clientes')
 
 

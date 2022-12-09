@@ -16,4 +16,4 @@ class tipoTransaccion(models.Model):
     name = fields.Char(string="Tipo Transaccion", required=True, help="Nombre del tipo de transaccion")
     transacciones = fields.One2many("upobebe.transaccion", 'tipotransaccion_id', 'Transacciones')
 
-    _sql_constraints = [("suscripcion_name_unique", "UNIQUE (name)", "El nombre debe ser único")]
+    _sql_constraints = [('suscripcion_name_unique', 'UNIQUE (name)', 'El nombre debe ser único')]

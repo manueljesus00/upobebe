@@ -12,7 +12,7 @@ class articulo(models.Model):
     _name = 'upobebe.articulo'
     _description = 'upobebe.articulo'
 
-    idArticulo = fields.Integer(required=True, readonly=True, copy=True, index=True, string="ID Articulo")
+    id_articulo = fields.Integer(required=True, readonly=True, copy=True, index=True, string="ID Articulo")
     photo = fields.Binary('Photo')
     precio = fields.Float(required=True)
 
@@ -20,7 +20,7 @@ class articulo(models.Model):
     tipoEstado = fields.Many2one("upobebe.estadoarticulo", required=True,string="Estado")
     # nombreProducto = fields.Many2one("upobebe.articulo","Tipo de articulo", required=True)
 
-    _sql_constraints = [('idArticulo_unique', 'unique(idArticulo)', 'El id del articulo debe ser unico')]
+    _sql_constraints = [('articulo_id_Articulo_unique', 'UNIQUE (id_articulo)', 'El id del articulo debe ser unico')]
 
     @api.constrains("precio")
     def _check_precio(self):

@@ -12,7 +12,7 @@ class Cliente(models.Model):
     _name = 'upobebe.cliente'
     _description = 'Clientes de UPOBEBE'
 
-    dniCliente = fields.Char(string="DNI", required=True, help="DNI del cliente")
+    dni_cliente = fields.Char(string="DNI", required=True, help="DNI del cliente")
     name = fields.Char(string="Nombre", required=True, help="Nombre del cliente")
     apellidos = fields.Char(string="Apellidos", required=True, help="Apellidos del cliente")
     correo = fields.Char(string="Correo", required=False, help="Correo del cliente")
@@ -23,15 +23,15 @@ class Cliente(models.Model):
     idTransaccion = fields.Many2many("upobebe.transaccion", required=False, string="Transaccion")
 
 
-    _sql_constraints = [('cliente_dniCliente_unique','UNIQUE (dniCliente)','El dni debe ser único')]
+    _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
    
-    @api.constrains("name")
+    @api.constrains('name')
     def _check_nombre(self):
         if len(self.name) > 60:
            raise models.ValidationError("La longitud de la cadena no puede ser superior a 60 caracteres")
     
-    @api.constrains("apellidos")
+    @api.constrains('apellidos')
     def _check_nombre(self):
         if len(self.apellidos) > 60:
             raise models.ValidationError(

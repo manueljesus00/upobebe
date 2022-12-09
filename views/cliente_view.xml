@@ -13,7 +13,7 @@
       <form string="Cliente">
         <sheet layout="auto">
           <group>
-            <field name="dniCliente" />
+            <field name="dni_cliente" />
             <field name="name" />
             <field name="apellidos" />
           </group>
@@ -37,7 +37,7 @@
     <field name="model">upobebe.cliente</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="dniCliente" />
+        <field name="dni_cliente" />
         <field name="apellidos" />
         <field name="name" />
         <field name="correo" />
