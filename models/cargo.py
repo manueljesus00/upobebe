@@ -11,6 +11,7 @@ class cargo(models.Model):
     _description = 'Lista de cargos'
 
     id_cargo = fields.Char("Cargo del empleado",required=True)
+    
     transacciones = fields.One2many("upobebe.empleados", 'tipoCargo', 'Cargo')
 
     _sql_constraints = [('cargo_id_cargo_unique', 'UNIQUE (id_cargo)', 'El identificador del cargo debe ser unico')]

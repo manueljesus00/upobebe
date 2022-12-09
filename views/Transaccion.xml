@@ -9,7 +9,7 @@
                         <field name="idTransaccion" readonly="1"/>
                         <field name="fechaTransaccion" widget="datetime" />
                         <field name="tipotransaccion_id" widget="many2one"/>
-                        <field name="idFinanciacion"/>
+                        <!-- <field name="idFinanciacion"/> -->
                         <field name="dniEmpleado" widget="many2one"/>
                     </group>
                     <!--<group>

@@ -15,9 +15,10 @@ class Empleados(models.Model):
     apellidos = fields.Char("Apellidos del empleado", size=90, required=True, help=" Apellidos del empleado")
     correo = fields.Char("Correo de contacto")
     fechaNacimiento = fields.Date("Fecha de nacimiento")
-    fechaAlta = fields.Date("Fecha de alta")
+    fechaAlta = fields.Date("Fecha de alta", required=True)
     
     transacciones = fields.One2many("upobebe.empleados", 'dni_empleado', 'Empleados')
 
     tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo")
 
+    #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta
