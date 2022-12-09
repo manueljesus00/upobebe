@@ -1,0 +1,47 @@
+<!--
+# Version:      0.2.2
+# Modelo:       Producto
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    09/12/2022
+-->
+
+<odoo>
+  <record id="upobebe_producto_form_view" model="ir.ui.view">
+    <field name="name">upobebe.producto.form</field>
+    <field name="model">upobebe.producto</field>
+    <field name="arch" type="xml">
+      <form string="Producto">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="descripcion" />
+            <field name="stock" />
+            <field name="categoria_id" widget="many2one"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="upobebe_producto_tree_view" model="ir.ui.view">
+    <field name="name">upobebe.producto.tree</field>
+    <field name="model">upobebe.producto</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="descripcion" />
+        <field name="stock" />
+        <field name="categoria_id" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="producto_list_action" model="ir.actions.act_window">
+    <field name="name">Producto</field>
+    <field name="res_model">upobebe.producto</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea producto</p>
+    </field>
+  </record>
+</odoo>

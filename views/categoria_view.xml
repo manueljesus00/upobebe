@@ -1,0 +1,46 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Categoria
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    09/12/2022
+-->
+
+<odoo>
+  <record id="upobebe_categoria_form_view" model="ir.ui.view">
+    <field name="name">upobebe.categoria.form</field>
+    <field name="model">upobebe.categoria</field>
+    <field name="arch" type="xml">
+      <form string="Categoria">
+        <sheet layout="auto">
+          <group>
+            <field name="name" />
+            <field name="descripcion" />
+          </group>
+          <group>
+            <field name="producto_ids" widget="one2many" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="upobebe_categoria_kanban_view" model="ir.ui.view">
+    <field name="name">upobebe.categoria.kanban</field>
+    <field name="model">upobebe.categoria</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name" />
+        <field name="descripcion" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="categoria_list_action" model="ir.actions.act_window">
+    <field name="name">Categoria</field>
+    <field name="res_model">upobebe.categoria</field>
+    <field name="view_mode">kanban,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea tu categoria</p>
+    </field>
+  </record>
+</odoo>

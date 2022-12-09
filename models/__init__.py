@@ -8,3 +8,5 @@ from . import empleados
 from . import articulo
 from . import estadoArticulo
 from . import almacen
+from . import producto
+from . import categoria

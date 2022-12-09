@@ -33,6 +33,8 @@
         'views/articulos.xml',
         'views/estadoArticulo_view.xml',
         'views/cargo_view.xml',
+        'views/producto_view.xml',
+        'views/categoria_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

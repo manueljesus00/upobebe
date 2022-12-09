@@ -14,7 +14,7 @@
 
     <menuitem id="upobebe_transaccion_menu" name="Gestión de transacciones" parent="main_upobebe_menu"/>
 
-    <menuitem id="upobebe_articulo_menu" name="Gestión de articulos" parent="main_upobebe_menu"/>
+    <menuitem id="upobebe_items_menu" name="Gestión de items" parent="main_upobebe_menu"/>
 
     <menuitem id="upobebe_empleado_menu" name="Gestión de empleados" parent="main_upobebe_menu"/>
 
@@ -26,9 +26,11 @@
     <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
     <menuitem name="Tipo de Transaccion" id="tipotransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/>
 
-    <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action=""/> -->    <!--Tenemos que cambiar el xml de articulo, no tiene el action-->
-    <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>
-    <!-- <menuitem name="Almacenes" id="almacen_menu" parent="upobebe_articulo_menu" groups="group_tienda_manager" action="almacen_list_action"/> --> <!-- Hay que crear el XML de almacen -->
+    <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action=""/> -->    <!--Tenemos que cambiar el xml de articulo, no tiene el action-->
+    <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>
+    <menuitem name="Categorias" id="categorias_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action="categoria_list_action"/>
+    <menuitem name="Productos" id="productos_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action="producto_list_action"/>
+    <!-- <menuitem name="Almacenes" id="almacen_menu" parent="upobebe_items_menu_menu" groups="group_tienda_manager" action="almacen_list_action"/> --> <!-- Hay que crear el XML de almacen -->
 
     <menuitem name="Empleados" id="empleados_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="empleado_list_action"/>
     <menuitem name="Cargo de empleados" id="cargo_menu" parent="upobebe_empleado_menu" groups="group_tienda_manager" action="cargo_list_action" />
