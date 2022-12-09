@@ -32,5 +32,6 @@
     <field name="view_mode">form,graph</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_create">No existen cargos actualmente</p>
-    </record>
-  </odoo>
+    </field>
+  </record>
+</odoo>
