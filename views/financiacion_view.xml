@@ -1,0 +1,36 @@
+<!--
+# Version:      0.1.0
+# Modelo:       Financiacion
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    10/12/2022
+-->
+
+<odoo>
+  <record id="upobebe_financiacion_form_view" model="ir.ui.view">
+    <field name="name">upobebe.financiacion.form</field>
+    <field name="model">upobebe.financiacion</field>
+    <field name="arch" type="xml">
+      <form string="Financiacion">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="plazos"/>
+            <field name="porcetaje"/>
+          </group>
+          <group>
+            <field name="id_transaccion" widget="many2one" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="financiacion_list_action" model="ir.actions.act_window">
+    <field name="name">Financiacion</field>
+    <field name="res_model">upobebe.financiacion</field>
+    <field name="view_mode">form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea una financiacion</p>
+    </field>
+  </record>
+</odoo>

@@ -25,6 +25,7 @@
 
     <menuitem name="Transacción" id="transacciones_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="transacciones_list_action"/>
     <menuitem name="Tipo de Transaccion" id="tipotransaccion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="tipotransaccion_list_action"/>
+    <!-- <menuitem name="Financiacion" id="financiacion_menu" parent="upobebe_transaccion_menu" groups="group_tienda_manager" action="financiacion_list_action"/>--><!-- No es necesario, ya que se puede hacer desde transaccion -->
 
     <!-- <menuitem name="Articulo" id="articulos_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action=""/> -->    <!--Tenemos que cambiar el xml de articulo, no tiene el action-->
     <menuitem name="Estados de Articulos" id="estado_articulo_menu" parent="upobebe_items_menu" groups="group_tienda_manager" action="estadoarticulo_list_action"/>

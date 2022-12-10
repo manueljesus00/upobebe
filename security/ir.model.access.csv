@@ -10,3 +10,4 @@ cargo_manager,cargo_manager,model_upobebe_cargo,group_tienda_manager,1,1,1,1
 almacen_manager,almacen_manager,model_upobebe_almacen,group_tienda_manager,1,1,1,1
 categoria_manager,categoria_manager,model_upobebe_categoria,group_tienda_manager,1,1,1,1
 producto_manager,producto_manager,model_upobebe_producto,group_tienda_manager,1,1,1,1
+financiacion_manager,financiacion_manager,model_upobebe_financiacion,group_tienda_manager,1,1,1,1

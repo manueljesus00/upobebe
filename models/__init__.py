@@ -10,3 +10,4 @@ from . import estadoArticulo
 from . import almacen
 from . import producto
 from . import categoria
+from . import financiacion

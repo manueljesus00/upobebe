@@ -35,6 +35,7 @@
         'views/cargo_view.xml',
         'views/producto_view.xml',
         'views/categoria_view.xml',
+        'views/financiacion_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
