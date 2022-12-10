@@ -14,6 +14,7 @@
         <sheet layout="auto">
           <group>
             <field name="name" />
+            <field name="descripcion" />
           </group>
           <group>
             <field name="articulo_ids" widget="one2many" />

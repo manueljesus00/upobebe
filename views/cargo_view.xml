@@ -7,7 +7,7 @@
       <form string="Cargos">
         <sheet layout="auto">
           <group>
-            <field name="id_cargo" />
+            <field name="name" />
           </group>
         </sheet>
       </form>
@@ -20,7 +20,7 @@
     <field name="model">upobebe.cargo</field>
     <field name="arch" type="xml">
       <graph string="Cargos totales en la empresa" type="pie">
-        <field name="id_cargo" type="row" />
+        <field name="name" type="row" />
       </graph>
     </field>
   </record>

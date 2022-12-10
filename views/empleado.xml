@@ -21,7 +21,7 @@
                         <field name="correo" />
                         <field name="fechaNacimiento" />
                         <field name="fechaAlta" />
-                        <field name="tipoCargo" widget="many2one" options="{'no_open': True}" />
+                        <field name="tipoCargo" widget="selection" />
                     </group>
                 </sheet>
             </form>

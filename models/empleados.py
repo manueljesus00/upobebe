@@ -19,6 +19,6 @@ class Empleados(models.Model):
     
     transacciones = fields.One2many("upobebe.empleados", 'dni_empleado', 'Empleados')
 
-    tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo")
+    tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo", required=True)
 
     #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta

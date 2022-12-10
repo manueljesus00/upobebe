@@ -1,20 +1,62 @@
 <odoo>
-  <data>
-    <!-- Vista en modo lista -->
+  <!-- Vista en modo form -->
+  <record id="upobebe_articulo_form_view" model="ir.ui.view">
+    <field name="name">upobebe.articulo.form</field>
+    <field name="model">upobebe.articulo</field>
+    <field name="arch" type="xml">
+      <form string="Articulo">
+        <sheet layout="auto">
+          <group>
+            <h1>
+              <field name="id_articulo" readonly="1"/>
+            </h1>
+          </group>
+          <group string="Datos del articulo">
+            <field name="photo" widget="image"/>
+            <field name="precio" />
+            <field name="tipoEstado" widget="selection" />
+            <field name="producto_id" widget="selection" />
+          </group>
+          <group string="Ubicación">
+            <field name="num_Almacen" widget="selection" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
 
-    <record model="ir.ui.view" id="upobebe.list">
-      <field name="name">Articulos UPOBEBE</field>
-      <field name="model">upobebe.articulo</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="id_articulo"/>
-          <field name="photo" widget="image" class="oe_avatar" />
-          <!-- <field name="numAlmacen"/> -->
-          <!-- <field name="tipoEstado"/> -->
-          <!-- <field name="nombreProducto"/> -->
-          <field name="precio"/>
-        </tree>
-      </field>
-    </record>
-  </data>
+  <!-- Vista en modo grafico -->
+  <record id="upobebe_articulo_graph_view" model="ir.ui.view">
+    <field name="name">upobebe.articulo.graph</field>
+    <field name="model">upobebe.articulo</field>
+    <field name="arch" type="xml">
+      <graph string="Tipos de productos en el almacen" type="pie">
+        <field name="producto_id" type="row" />
+      </graph>
+    </field>
+  </record>
+
+  <!-- Vista en modo lista -->
+  <record id="upobebe_articulo_list_view" model="ir.ui.view">
+    <field name="name">upobebe.articulo.tree</field>
+    <field name="model">upobebe.articulo</field>
+    <field name="arch" type="xml">
+      <tree string="Listado de articulos actualmente">
+        <field name="id_articulo" />
+        <field name="precio" />
+        <field name="num_Almacen" />
+        <field name="tipoEstado" />
+      </tree>
+    </field>
+  </record>
+
+  <!-- Acciones al abrir la vista -->
+  <record id="articulo_list_action" model="ir.actions.act_window">
+    <field name="name">Articulos</field>
+    <field name="res_model">upobebe.articulo</field>
+    <field name="view_mode">form,graph,tree</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_create">No existen articulos actualmente</p>
+    </field>
+  </record>
 </odoo>
