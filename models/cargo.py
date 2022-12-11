@@ -10,9 +10,10 @@ class cargo(models.Model):
     _name = 'upobebe.cargo'
     _description = 'upobebe.cargo'
 
-    name = fields.Char("Cargo del empleado",required=True)
+    id_cargo = fields.Char("Cargo del empleado",required=True)
     # Se modifica idCargo por name para comprobar si asi se ven los valores normalmente
     
     transacciones = fields.One2many("upobebe.empleados", 'tipoCargo', 'Cargo')
-
+    
+    _rec_name = 'id_cargo'
     _sql_constraints = [('cargo_name_unique', 'UNIQUE (name)', 'El identificador del cargo debe ser unico')]

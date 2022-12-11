@@ -22,7 +22,7 @@ class Cliente(models.Model):
     suscripciones_ids = fields.Many2one("upobebe.suscripcion", required=False, string="Suscripcion")
     idTransaccion = fields.Many2many("upobebe.transaccion", required=False, string="Transaccion")
 
-
+    
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
    

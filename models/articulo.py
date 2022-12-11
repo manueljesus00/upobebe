@@ -20,6 +20,7 @@ class articulo(models.Model):
     tipoEstado = fields.Many2one("upobebe.estadoarticulo", required=True,string="Estado")
     producto_id = fields.Many2one("upobebe.producto", required=True, string="Producto")
 
+    
     _sql_constraints = [('articulo_id_Articulo_unique', 'UNIQUE (id_articulo)', 'El id del articulo debe ser unico')]
 
     @api.constrains("precio")

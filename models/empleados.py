@@ -21,4 +21,5 @@ class Empleados(models.Model):
 
     tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo", required=True)
 
+    _rec_name = 'dni_empleado'
     #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta
