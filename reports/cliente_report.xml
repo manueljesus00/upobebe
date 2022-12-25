@@ -1,0 +1,56 @@
+<!-- # -*- coding: utf-8 -*-
+
+# Version:      0.1.0
+# Report:       Cliente
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    25/12/2022 -->
+
+<odoo>
+    <template id="report_cliente">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="front-size: 24px; margin-bottom: 20px;">
+                            <span style="dont-weight: bold; text-decoration: underline; ">DNI: </span>
+                            <span style="cpñpr: #999999;" t-field="o.dni_cliente" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-lleft: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>DNI: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Nombre: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Apellidos: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Correo: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Fecha de nacimiento: </strong>
+                                            </p>
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.dni_cliente" />
+                                            <p t-field="o.name" />
+                                            <p t-field="o.apellidos" />
+                                            <p t-field="o.correo" />
+                                            <p t-field="o.fechaNacimiento" />                                            <p t-field="o.estado_cliente" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>                        
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
