@@ -18,6 +18,9 @@ class Transaccion(models.Model):
                                ('en_curso', 'En curso'),
                                ('finalizada', 'Finalizada'), ],
                                 'Estado', default='pendiente')
+    idTransaccion =  fields.Integer("ID. de la transaccion",required=True,store=True)
+    # Mirar que funcione asi para un autoincremental, sino se hace computando el id
+    # Pendiente de testing
     
     tipotransaccion_id = fields.Many2one("upobebe.tipotransaccion", required=True, string="Tipo de transaccion")
     dniEmpleado = fields.Many2one("upobebe.empleados",string="Empleado",required=True)
@@ -27,6 +30,8 @@ class Transaccion(models.Model):
     #idProveedor = fields.Many2one("upobebe.proveedor",string="Proveedor")
     #dniCliente = fields.Many2one("upobebe.cliente", string="Cliente", size=9)
     fechaTransaccion = fields.Datetime('Fecha de compra',required=True, autodate=True)
+    
+    _sql_constraints = [('transaccion_idTransaccion_unique','UNIQUE (idTransaccion)','El id de la transaccion debe ser único')]
 
     def btn_submit_to_pendiente(self):
         if self.estado != 'finalizada':
@@ -43,3 +48,4 @@ class Transaccion(models.Model):
     def btn_submit_to_finalizada(self):
         self.write({'estado': 'finalizada'})
                 
+    
