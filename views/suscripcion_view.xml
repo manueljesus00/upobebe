@@ -17,7 +17,7 @@
             <field name="descuento" />
           </group>
           <group>
-            <field name="cliente_ids" widget="one2many" />
+            <field name="cliente_ids" widget="many2many" />
           </group>
         </sheet>
       </form>
