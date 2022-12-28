@@ -9,6 +9,8 @@
           <group>
             <field name="id_cargo" />
           </group>
+          <newline></newline>
+            <button name="btn_desapuntarEmpleados" string="Desapuntar empleados" type="object" class="oe_highlight" />
         </sheet>
       </form>
     </field>

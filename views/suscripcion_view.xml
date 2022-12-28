@@ -19,6 +19,8 @@
           <group>
             <field name="cliente_ids" widget="one2many" />
           </group>
+          <newline></newline>
+            <button name="btn_desapuntarClientes" string="Desapuntar Clientes" type="object" class="oe_highlight" />
         </sheet>
       </form>
     </field>
