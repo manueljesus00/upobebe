@@ -19,6 +19,7 @@
           </group>
           <group>
             <field name="correo" />
+            <field name="fechaNacimiento" widget="datetime"/>
             <field name="domicilio" />
             <field name="suscripciones_ids" widget="many2one" />
             <field name="idTransaccion">
