@@ -1,8 +1,8 @@
 <!--
-# Version:      0.2.2
+# Version:      0.2.3
 # Modelo:       Cliente
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
-# Fecha rev:    06/12/2022
+# Fecha rev:    28/12/2022
 -->
 
 <odoo>
@@ -11,6 +11,9 @@
     <field name="model">upobebe.cliente</field>
     <field name="arch" type="xml">
       <form string="Cliente">
+      <header>
+        <button name="btn_generate_report" string="Generar reporte del cliente" type="object" class="oe_highlight" />
+      </header>
         <sheet layout="auto">
           <group>
             <field name="dni_cliente" />
