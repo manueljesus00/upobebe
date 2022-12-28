@@ -38,4 +38,9 @@ class Cliente(models.Model):
         if len(self.apellidos) > 60:
             raise models.ValidationError(
                 "La longitud de la cadena no puede ser superior a 60 caracteres")
+
+    @api.constrains('fechaNacimiento')
+    def _check_fechaNacimiento(self):
+        if self.fechaNacimiento > fields.Datetime.now():
+            raise models.ValidationError("La fecha de nacimiento no puede ser superior a la fecha actual")
     
