@@ -25,7 +25,7 @@ class Cliente(models.Model):
     
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
-   
+    _rec_name = 'dni_cliente'
     @api.constrains('name')
     def _check_nombre(self):
         if len(self.name) > 60:

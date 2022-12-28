@@ -27,6 +27,7 @@ class Transaccion(models.Model):
     
     _sql_constraints = [('transaccion_idTransaccion_unique','UNIQUE (idTransaccion)','El id de la transaccion debe ser único')]
 
+    _rec_name = 'idTransaccion'
     # Funcion para sacar el ultimo id de transaccion y emplearlo
     def get_next_id(self):
         last_id = self.search([], order='idTransaccion desc', limit=1).idTransaccion
