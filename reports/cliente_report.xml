@@ -51,7 +51,7 @@
                             </div>
                             <!-- Se ejecuta si hay suscripciones asociadas -->
                             <div t-if="o.suscripciones_ids" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #0000FF;">
-                            Suscripciones asociadas a <span t-field="o.name"/>
+                            Suscripción asociada a <span t-field="o.name"/>
                             </div>
                             <div t-if="o.suscripciones_ids" id="suscripciones_clientes" class="row" style="margin-top:10px;">
                                 <table class="table table-condensed">
