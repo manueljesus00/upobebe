@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.2.2
+# Version:      0.3.0
 # Modelo:       Suscripcion
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
-# Fecha rev:    06/12/2022
+# Fecha rev:    28/12/2022
 
 from odoo import models, fields, api
 
@@ -25,5 +25,6 @@ class Suscripcion(models.Model):
         if self.descuento < 0.0 or self.descuento > 1.0:
             raise models.ValidationError("El descuento debe ser un valor entre 0 y 1")
 
-    
-   
+    def btn_desapuntarClientes(self):
+        self.write({'cliente_ids': [(5,)]})
+

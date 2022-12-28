@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.2.0
+# Version:      0.2.1
 # Modelo:       Cliente
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
 # Fecha rev:    06/12/2022
@@ -25,6 +25,8 @@ class Cliente(models.Model):
     
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
+    def btn_generate_report(self):
+        return self.env.ref('upobebe.cliente_report').report_action(self)
    
     @api.constrains('name')
     def _check_nombre(self):

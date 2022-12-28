@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.1.0
+# Version:      0.2.0
 # Modelo:       Transaccion
-# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
-# Fecha rev:    11/11/2022
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00) && Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    28/12/2022
 
 
 # from odoo import models, fields, api
@@ -14,6 +14,10 @@ class Transaccion(models.Model):
     _description = 'Transaccion en UPOBebe'
 
     idTransaccion =  fields.Integer("ID. de la transaccion",required=True)
+    estado = fields.Selection([('pendiente', 'Pendiente'),
+                               ('en_curso', 'En curso'),
+                               ('finalizada', 'Finalizada'), ],
+                                'Estado', default='pendiente')
     
     tipotransaccion_id = fields.Many2one("upobebe.tipotransaccion", required=True, string="Tipo de transaccion")
     dniEmpleado = fields.Many2one("upobebe.empleados",string="Empleado",required=True)
@@ -23,4 +27,19 @@ class Transaccion(models.Model):
     #idProveedor = fields.Many2one("upobebe.proveedor",string="Proveedor")
     #dniCliente = fields.Many2one("upobebe.cliente", string="Cliente", size=9)
     fechaTransaccion = fields.Datetime('Fecha de compra',required=True, autodate=True)
+
+    def btn_submit_to_pendiente(self):
+        if self.estado != 'finalizada':
+            self.write({'estado': 'pendiente'})
+        else:
+            raise models.ValidationError('Una transaccion finalizada no puede volver a estar pendiente')
+    
+    def btn_submit_to_en_curso(self):
+        if self.estado != 'finalizada':
+            self.write({'estado': 'en_curso'})
+        else:
+            raise models.ValidationError('Una transaccion finalizada no puede volver a estar en curso')
+    
+    def btn_submit_to_finalizada(self):
+        self.write({'estado': 'finalizada'})
                 
