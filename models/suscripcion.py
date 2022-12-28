@@ -27,4 +27,4 @@ class Suscripcion(models.Model):
 
     def btn_desapuntarClientes(self):
         self.write({'cliente_ids': [(5,)]})
-   
+

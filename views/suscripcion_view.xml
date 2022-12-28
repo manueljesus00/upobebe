@@ -1,8 +1,8 @@
 <!--
-# Version:      0.1.0
+# Version:      0.1.1
 # Modelo:       Suscripcion
 # Editor:       Pedro Jesus Lazaro Diaz (@vitalsum)
-# Fecha rev:    24/11/2022
+# Fecha rev:    28/12/2022
 -->
 
 <odoo>
@@ -17,7 +17,7 @@
             <field name="descuento" />
           </group>
           <group>
-            <field name="cliente_ids" widget="one2many" />
+            <field name="cliente_ids" widget="many2many" />
           </group>
           <newline></newline>
             <button name="btn_desapuntarClientes" string="Desapuntar Clientes" type="object" class="oe_highlight" />

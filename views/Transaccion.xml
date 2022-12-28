@@ -4,10 +4,16 @@
         <field name="model">upobebe.transaccion</field>
         <field name="arch" type="xml">
             <form string="Transaccion">
+                <header>
+                    <button name="btn_submit_to_pendiente" string="Pendiente" type="object" class="oe_highlight" />
+                    <button name="btn_submit_to_en_curso" string="En curso" type="object" class="oe_highlight" />
+                    <button name="btn_submit_to_finalizada" string="Finalizada" type="object" class="oe_highlight" />
+                </header>
                 <sheet layout="auto">
                     <group>
                         <field name="idTransaccion" readonly="1"/>
                         <field name="fechaTransaccion" widget="datetime" />
+                        <field name="estado" widget="statusbar" />
                         <field name="tipotransaccion_id" widget="many2one"/>
                         <field name="id_financiacion" widget="many2many"/>
                         <field name="dniEmpleado" widget="many2one"/>
