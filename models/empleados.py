@@ -23,7 +23,7 @@ class Empleados(models.Model):
 
     _rec_name = 'dni_empleado'
 
-    #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta
 
+    #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta
     def btn_onchange_fechaAlta_actual(self):
         self.fechaAlta = fields.Date.today()

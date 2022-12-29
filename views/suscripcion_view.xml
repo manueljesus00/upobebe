@@ -37,10 +37,21 @@
     </field>
   </record>
 
+  <record id="upobebe_suscripcion_graph_view" model="ir.ui.view">
+    <field name="name">upobebe.suscripcion.graph</field>
+    <field name="model">upobebe.suscripcion</field>
+    <field name="arch" type="xml">
+      <graph string="Numero de clientes por suscripcion" type="bar">
+        <field name="name" />
+        <field name="cantidad" />
+      </graph>
+    </field>
+  </record>
+
   <record id="suscripcion_list_action" model="ir.actions.act_window">
     <field name="name">Suscripcion</field>
     <field name="res_model">upobebe.suscripcion</field>
-    <field name="view_mode">kanban,form</field>
+    <field name="view_mode">kanban,form,graph</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea tu suscripcion</p>
     </field>
