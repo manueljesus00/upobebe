@@ -20,7 +20,7 @@
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <span style="font-weight: bold;">Nombre:</span>
-                                            <span style="color: #0000FF;" t-field="o.name"/>
+                                            <span style="color: #0000FF;" t-field="o.nombre"/>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -51,9 +51,6 @@
                             </div>
 
                             <!-- Se ejecuta si el empleado tiene transacciones realizadas -->
-                            <div t-if="o.idTransaccion" class="row" style = "margin-top:40px; font-weight:bold; font-size:17px; color: #00FF00;">
-                            Transacciones realizadas por <span t-field="o.name"/>
-                            </div>
                             <div t-if="o.transacciones" id="transacciones_empleado" class="row" style="margin-top:10px;">
                                 <table class="table table-condensed">
                                     <thead>
@@ -66,7 +63,7 @@
                                     <tbody>
                                         <tr t-foreach="o.transacciones" t-as="t">
                                             <td>
-                                                <span t-field="t.transacciones"/>
+                                                <span t-field="t.idTransaccion"/>
                                             </td>
                                             <td>
                                                 <span t-field="t.tipotransaccion_id"/>
@@ -80,8 +77,8 @@
                             </div>
 
                             <!-- Se ejecuta si no hay transacciones realizadas -->
-                            <div t-if="not o.idTransaccion" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #FF0000;">
-                            No hay transacciones realizadas por <span t-field="o.name"/>
+                            <div t-if="not o.transacciones" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #FF0000;">
+                            No hay transacciones realizadas por <span t-field="o.nombre"/>
                             </div>
                         </div>
                     </div>
