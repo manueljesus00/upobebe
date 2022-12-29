@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-# Version:      0.2.0
+# Version:      0.3.0
 # Modelo:       EMPLEADO
-# Editor:       Manuel Jesus Flores Montano (@manueljesus00)
-# Fecha rev:    30/11/2022
+# Editor:       Manuel Jesus Flores Montano (@manueljesus00) && Pedro Jesus Lazaro Diaz (@vitalsum)
+# Fecha rev:    29/12/2022
+
 from odoo import models, fields, api
 
 class Empleados(models.Model):
@@ -18,8 +19,11 @@ class Empleados(models.Model):
     fechaAlta = fields.Date("Fecha de alta", required=True)
     
     transacciones = fields.One2many("upobebe.empleados", 'dni_empleado', 'Empleados')
-
     tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo", required=True)
 
     _rec_name = 'dni_empleado'
+
     #Aquí podriamos meter un voton que te pusiese la fecha de hoy para el Alta
+
+    def btn_onchange_fechaAlta_actual(self):
+        self.fechaAlta = fields.Date.today()

@@ -13,8 +13,8 @@ class Cliente(models.Model):
     _description = 'Clientes de UPOBEBE'
 
     dni_cliente = fields.Char(string="DNI", size=9, required=True, help="DNI del cliente")
-    name = fields.Char(string="Nombre", required=True, help="Nombre del cliente")
-    apellidos = fields.Char(string="Apellidos", required=True, help="Apellidos del cliente")
+    name = fields.Char(string="Nombre", size=60, required=True, help="Nombre del cliente")
+    apellidos = fields.Char(string="Apellidos", size=60, required=True, help="Apellidos del cliente")
     correo = fields.Char(string="Correo", required=False, help="Correo del cliente")
     domicilio = fields.Char(string="Domicilio", required=False, help="Domicilio del cliente")
     fechaNacimiento = fields.Datetime("Fecha de nacimiento", autodate=True, help="Fecha de nacimiento del cliente")

@@ -23,6 +23,8 @@
                         <field name="fechaAlta" />
                         <field name="tipoCargo" widget="selection" />
                     </group>
+                    <newline></newline>
+                        <button name="btn_onchange_fechaAlta_actual" string="Establecer fecha actual" type="object" class="oe_highlight" />
                 </sheet>
             </form>
         </field>
