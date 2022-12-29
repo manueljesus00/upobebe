@@ -27,7 +27,7 @@
         'security/ir.model.access.csv',
         'reports/reports.xml',
         'reports/cliente_report.xml',
-        'repots/empleados_report.xml',
+        'reports/empleados_report.xml',
         'views/cliente_view.xml',
         'views/suscripcion_view.xml',
         'views/tipoTransaccion_view.xml',
