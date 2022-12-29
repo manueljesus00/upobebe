@@ -23,6 +23,6 @@ class cargo(models.Model):
           self.write({'empleados_ids':[(5,)]})
     
     @api.depends('empleados_ids')
-    def _ocupacionTotal(self):
+    def _cantidadEmpleados(self):
         for record in self:
             record.cantidad = len(record.empleados_ids)

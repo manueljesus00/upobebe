@@ -11,9 +11,9 @@
     <field name="model">upobebe.cliente</field>
     <field name="arch" type="xml">
       <form string="Cliente">
-      <header>
-        <button name="btn_generate_report" string="Generar reporte del cliente" type="object" class="oe_highlight" />
-      </header>
+        <header>
+          <button name="btn_generate_report" string="Generar informe" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
           <group>
             <field name="dni_cliente" />
@@ -48,6 +48,16 @@
       </tree>
     </field>
   </record>
+
+<!-- 
+  <template id="button_to_generate_report" inherit_id="web.webclient_buttons">
+    <xpath expr="//div[@name='buttons']" position="inside">
+      <div class="js_class d-inline">
+        <script> src="/upobebe/js/button.js" </script>
+      </div>
+    </xpath>
+  </template> 
+-->
 
   <record id="cliente_list_action" model="ir.actions.act_window">
     <field name="name">Cliente</field>
