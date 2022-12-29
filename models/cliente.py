@@ -23,6 +23,7 @@ class Cliente(models.Model):
     idTransaccion = fields.Many2many("upobebe.transaccion", required=False, string="Transaccion")
 
     
+    _rec_name = 'dni_cliente'
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
     def btn_generate_report(self):
