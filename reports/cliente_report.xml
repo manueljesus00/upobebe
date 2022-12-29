@@ -1,0 +1,120 @@
+<!-- # -*- coding: utf-8 -*-
+
+# Version:      1.0.0
+# Report:       Cliente
+# Editor:       Pedro Jesus Lazaro Diaz (@vitalsum) and Manuel Jesus Flores Montano (@manueljesus00)
+# Fecha rev:    28/12/2022 -->
+<odoo>
+    <template id="cliente_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure">
+                            <div class="row" style="font-size: 24px; margin-top: 20px; margin-bottom: 20px">
+                                <span style="font-weight: bold;">DNI del cliente:</span>
+                                <span style="color: #0000FF;" t-field="o.dni_cliente"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span style="font-weight: bold;">Nombre:</span>
+                                            <span style="color: #0000FF;" t-field="o.name"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span style="font-weight: bold;">Apellidos:</span>
+                                            <span style="color: #0000FF;" t-field="o.apellidos"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span style="font-weight: bold;">Dirección de domicilio:</span>
+                                            <span style="color: #0000FF;" t-field="o.domicilio"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span style="font-weight: bold;">Correo electronico:</span>
+                                            <span style="color: #0000FF;" t-field="o.correo"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <span style="font-weight: bold;">Fecha de nacimiento:</span>
+                                            <span style="color: #0000FF;" t-field="o.fechaNacimiento"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Se ejecuta si hay suscripciones asociadas -->
+                            <div t-if="o.suscripciones_ids" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #0000FF;">
+                            Suscripción asociada a <span t-field="o.name"/>
+                            </div>
+                            <div t-if="o.suscripciones_ids" id="suscripciones_clientes" class="row" style="margin-top:10px;">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de la suscripcion</th>
+                                            <th>Porcentaje de descuento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.suscripciones_ids" t-as="s">
+                                            <td>
+                                                <span t-field="s.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="s.descuento"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Se ejecuta si no hay suscripciones asociadas -->
+                            <div t-if="not o.suscripciones_ids" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #FF0000;">
+                            No hay suscripciones asociadas a <span t-field="o.name"/>
+                            </div>
+
+                            <!-- Se ejecuta si el cliente tiene transacciones realizadas -->
+                            <div t-if="o.idTransaccion" class="row" style = "margin-top:40px; font-weight:bold; font-size:17px; color: #00FF00;">
+                            Transacciones realizadas por <span t-field="o.name"/>
+                            </div>
+                            <div t-if="o.idTransaccion" id="transacciones_cliente" class="row" style="margin-top:10px;">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>id. Transaccion</th>
+                                            <th>Tipo</th>
+                                            <th>Fecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.idTransaccion" t-as="t">
+                                            <td>
+                                                <span t-field="t.idTransaccion"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="t.tipotransaccion_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="t.fechaTransaccion"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Se ejecuta si no hay transacciones realizadas -->
+                            <div t-if="not o.idTransaccion" class="row" style="margin-top:40px; font-weight:bold; font-size:17px; color: #FF0000;">
+                            No hay transacciones realizadas por <span t-field="o.name"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

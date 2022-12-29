@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="cliente_report" model="upobebe.cliente" report_type="qweb-pdf" string="Informe del cliente" name="upobebe.cliente_report" />
+    <report id="empleado_report" model="upobebe.empleados" report_type="qweb-pdf" string="Informe del empleado" name="upobebe.empleado_report" />
+</odoo>

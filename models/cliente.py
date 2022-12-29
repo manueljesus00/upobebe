@@ -23,6 +23,7 @@ class Cliente(models.Model):
     idTransaccion = fields.Many2many("upobebe.transaccion", required=False, string="Transaccion")
 
     
+    _rec_name = 'dni_cliente'
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
     def btn_generate_report(self):
@@ -38,4 +39,9 @@ class Cliente(models.Model):
         if len(self.apellidos) > 60:
             raise models.ValidationError(
                 "La longitud de la cadena no puede ser superior a 60 caracteres")
+
+    @api.constrains('fechaNacimiento')
+    def _check_fechaNacimiento(self):
+        if self.fechaNacimiento > fields.Datetime.now():
+            raise models.ValidationError("La fecha de nacimiento no puede ser superior a la fecha actual")
     
