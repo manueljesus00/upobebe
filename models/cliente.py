@@ -27,8 +27,13 @@ class Cliente(models.Model):
     _sql_constraints = [('cliente_dni_cliente_unique','UNIQUE (dni_cliente)','El dni debe ser único')]
 
     def btn_generate_report(self):
-        return self.env.ref('upobebe.cliente_report').report_action(self)
-   
+        reporte = self.env['ir.actions.report'].search([('report_name', '=', 'upobebe.cliente_report')], limit=1)
+        if reporte:
+            return reporte.report_action(self)
+        else:
+            raise models.ValidationError('No se ha encontrado el reporte "upobebe.cliente_report".')
+
+
     @api.constrains('name')
     def _check_nombre(self):
         if len(self.name) > 60:
