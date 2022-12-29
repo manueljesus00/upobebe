@@ -19,7 +19,7 @@ class Empleados(models.Model):
     fechaAlta = fields.Date("Fecha de alta", required=True)
     
     transacciones = fields.One2many("upobebe.empleados", 'dni_empleado', 'Empleados')
-    tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo", required=True)
+    tipoCargo = fields.Many2one("upobebe.cargo", string="Cargo", required=False)
 
     _rec_name = 'dni_empleado'
 

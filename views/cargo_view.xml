@@ -16,13 +16,25 @@
     </field>
   </record>
 
+  <!-- Vista en modo lista -->
+  <record id="upobebe_cargo_tree_view" model="ir.ui.view">
+    <field name="name">upobebe.cargo.tree</field>
+    <field name="model">upobebe.cargo</field>
+    <field name="arch" type="xml">
+      <tree string="Cargos">
+        <field name="id_cargo" />
+      </tree>
+    </field>
+  </record>
+
   <!-- Vista en modo grafico -->
   <record id="upobebe_cargo_graph_view" model="ir.ui.view">
     <field name="name">upobebe.cargo.graph</field>
     <field name="model">upobebe.cargo</field>
     <field name="arch" type="xml">
-      <graph string="Cargos totales en la empresa" type="pie">
-        <field name="id_cargo" type="row" />
+      <graph string="Numero de empleados por cargo" type="bar">
+        <field name="id_cargo" />
+        <field name="cantidad" />
       </graph>
     </field>
   </record>
@@ -31,7 +43,7 @@
   <record id="cargo_list_action" model="ir.actions.act_window">
     <field name="name">Cargos</field>
     <field name="res_model">upobebe.cargo</field>
-    <field name="view_mode">form,graph</field>
+    <field name="view_mode">tree,form,graph</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_create">No existen cargos actualmente</p>
     </field>

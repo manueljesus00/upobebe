@@ -5,12 +5,13 @@
 # Editor:       Manuel Jesus Flores Montano (@manueljesus00) && Pedro Jesus Lazaro Diaz (@vitalsum)
 # Fecha rev:    28/12/2022
 
-from odoo import models, fields
+from odoo import models, fields, api
 class cargo(models.Model):
     _name = 'upobebe.cargo'
     _description = 'upobebe.cargo'
 
     id_cargo = fields.Char("Cargo del empleado",required=True)
+    cantidad = fields.Integer(compute='_cantidadEmpleados',string='Cantidad de empleados', store=True)
     
     empleados_ids = fields.One2many("upobebe.empleados", 'tipoCargo', 'Cargo')
     
@@ -20,3 +21,8 @@ class cargo(models.Model):
 
     def btn_desapuntarEmpleados(self):
           self.write({'empleados_ids':[(5,)]})
+    
+    @api.depends('empleados_ids')
+    def _ocupacionTotal(self):
+        for record in self:
+            record.cantidad = len(record.empleados_ids)
